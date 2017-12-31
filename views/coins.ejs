@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xml:lang="en-IN" lang="en-IN" class="mdl-js">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Arbi ~ Arbitrage Tracker</title>
+  <meta name="description" content="Mi Power Bank">
+  <meta name="theme-color" content="#ff6700">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <!-- S header -->
+  <header id="J_header" class="xm-header ">
+    <div class="top">
+      <div class="button-box button-left">
+        <a href="/" class="icon-home"></a>
+      </div>
+      <h1 class="title"><span id="J_headerName"><%= symbol %></span></h1>
+    </div>
+    <div class="right">
+      <button type="button" class="btn btn-primary" onclick="compare()">Compare</button>
+    </div>
+  </header>
+  <!-- E header -->
+  <div class="main J_lazyLoadBox">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S.no</th>
+          <th>Exchange</th>
+          <th>Pair</th>
+          <th>Volume (%)</th>
+          <th>Volume (24h)</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < market.length ; i++) { %>
+          <tr>
+            <td>
+              <%= [i+1] %>
+            </td>
+            <td>
+              <%= market[i].Exchange %>
+            </td>
+            <td>
+              <%= market[i].Pair %>
+            </td>
+            <td>
+              <%= market[i]['Volume (%)'] %>
+            </td>
+            <td>
+              <%= market[i]['Volume (24h)'] %>
+            </td>
+            <td>
+              <%= market[i].Price %>
+            </td>
+            <td>
+              <input type="checkbox" name="compare" id="<%= market[i].Price %>" value="<%= market[i].Price %>" onclick='compare(this);'>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+  <!-- S footer -->
+  <footer class="xm-footer J_lazyLoadBox" id="J_footer">
+  </footer>
+</body>
+<script type="text/javascript">
+function compare(cb) {
+
+  var checks = document.querySelectorAll("input[type='checkbox']");
+  var checked = 0
+  var a = false,
+    b = false;
+  for (var i = 0; i < checks.length; i++) {
+    if (checks[i].checked) {
+      if (!a) a = checks[i].id.replace(/[^0-9-.]/g, '');
+      else if (!b) b = checks[i].id.replace(/[^0-9-.]/g, '');
+      checked++
+    }
+  }
+  if (checked == 2) {
+    var percent = ((a - b) / a ) * 100;
+    alert("Clicked, new value = " + percent + '%');
+  } else if (checked > 2) alert('select only two');
+}
+
+</script>
+
+</html>

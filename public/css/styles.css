@@ -1,0 +1,250 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #d98026
+}
+
+a:hover {
+    color: #ff8000;
+    text-decoration: none;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+ul.nav-cust {
+    list-style: none;
+}
+
+.top{
+    float: left;
+}
+
+.right{
+    float: right
+}
+
+#J_header{
+    padding:2%;
+}
+
+ul.nav-cust li {
+    padding: 5px 0;
+}
+
+.page-head {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.under-l {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.nav-brand-cust {
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.landing img {
+    height: 200px;
+}
+
+.product {
+    margin-bottom: 20px;
+}
+
+.full{
+	padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Shop Page
+-------------------- */
+
+.show-img {
+    height: 400px;
+    width: auto;
+}
+
+.show-container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.input-quantity {
+    width: 50px;
+    padding: 5px 1px;
+}
+
+.show-price {
+    color: #7A7A7A;
+}
+
+
+/* Bootstrap resets
+-------------------- */
+
+.btn {
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.badge {
+    border-radius: 0;
+    font-size: 18px;
+}
+
+a.btn.btn-primary,
+a.btn-primary {
+    background-color: #d98026;
+    border: none;
+}
+
+a.btn.btn-primary:hover,
+a.btn-primary:hover {
+    background-color: #ff8000;
+}
+
+button.btn.btn-primary {
+    background-color: #d98026;
+    border: none;
+}
+
+button.btn.btn-primary:hover {
+    background-color: #ff8000;
+}
+
+input.btn-primary {
+    background-color: #d98026;
+    border: none;
+}
+
+input.btn-primary:hover {
+    background-color: #ff8000;
+}
+
+.fa.fa-shopping-cart {
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.alert {
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem
+}
+
+.alert-heading {
+    color: inherit
+}
+
+.alert-link {
+    font-weight: 700
+}
+
+.alert-dismissible .close {
+    position: relative;
+    top: -.75rem;
+    right: -1.25rem;
+    padding: .75rem 1.25rem;
+    color: inherit
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d
+}
+
+.alert-success hr {
+    border-top-color: #c1e2b3
+}
+
+.alert-success .alert-link {
+    color: #2b542c
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    color: #31708f
+}
+
+.alert-info hr {
+    border-top-color: #a6d5ec
+}
+
+.alert-info .alert-link {
+    color: #245269
+}
+
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faf2cc;
+    color: #8a6d3b
+}
+
+.alert-warning hr {
+    border-top-color: #f7ecb5
+}
+
+.alert-warning .alert-link {
+    color: #66512c
+}
+
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442
+}
+
+.alert-danger hr {
+    border-top-color: #e4b9b9
+}
+
+.alert-danger .alert-link {
+    color: #843534
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+@-o-keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+    to {
+        background-position: 0 0
+    }
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+    to {
+        background-position: 0 0
+    }
+}

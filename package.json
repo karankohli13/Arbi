@@ -1,0 +1,25 @@
+{
+  "name": "arbi",
+  "version": "0.0.1",
+  "description": "Arbitrage yo!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Ramachandra jr",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "coinmarketcap-cli-api": "^1.1.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.5",
+    "ejs-lint": "^0.3.0",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.3",
+    "node-coinmarketcap-api": "^1.0.4"
+  }
+}

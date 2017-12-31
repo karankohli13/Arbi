@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xml:lang="en-IN" lang="en-IN" class="mdl-js">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Arbi ~ Arbitrage Tracker</title>
+  <meta name="description" content="Mi Power Bank">
+  <meta name="theme-color" content="#ff6700">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body cz-shortcut-listen="true">
+  <!-- S header -->
+  <header id="J_header" class="xm-header ">
+    <div class="top">
+      <div class="button-box button-left">
+        <a href="/" class="icon-home"></a>
+      </div>
+      <h1 class="title"><span id="J_headerName">Coins</span></h1>
+  </header>
+  <!-- E header -->
+  <div class="main J_lazyLoadBox">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>S.no</th>
+          <th>id</th>
+          <th>Name</th>
+          <th>Symbol</th>
+          <th>Rank</th>
+          <th>Price USD</th>
+          <th>Price BTC</th>
+          <th>24h Volume USD</th>
+          <th>Market Cap USD</th>
+          <th>Available Supply</th>
+          <th>Total Supply</th>
+          <th>Max Supply</th>
+          <th>Percentage Change 1h</th>
+          <th>Percentage Change 24h</th>
+          <th>Percentage Change 7D</th>
+          <th>Last Updated</th>
+          <th>Price EUR</th>
+          <th>24h Volume EUR</th>
+          <th>Market Cap EUR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < coins.length ; i++) { %>
+          <tr>
+            <td>
+              <%= [i+1] %>
+            </td>
+            <td>
+              <a href="/<%= coins[i].symbol %>">
+              <%= coins[i].id %>
+            </a>
+            </td>
+            <td>
+              <%= coins[i].name %>
+            </td>
+            <td>
+              <%= coins[i].symbol %>
+            </td>
+            <td>
+              <%= coins[i].rank %>
+            </td>
+            <td>
+              <%= coins[i].price_usd %>
+            </td>
+            <td>
+              <%= coins[i].price_btc %>
+            </td>
+            <td>
+              <%= coins[i]['24h_volume_usd'] %>
+            </td>
+            <td>
+              <%= coins[i].market_cap_usd %>
+            </td>
+            <td>
+              <%= coins[i].available_supply %>
+            </td>
+            <td>
+              <%= coins[i].total_supply %>
+            </td>
+            <td>
+              <%= coins[i].max_supply %>
+            </td>
+            <td>
+              <%= coins[i].percent_change_1h %>
+            </td>
+            <td>
+              <%= coins[i].percent_change_24h %>
+            </td>
+            <td>
+              <%= coins[i].percent_change_7d %>
+            </td>
+            <td>
+              <%= coins[i].last_updated %>
+            </td>
+            <td>
+              <%= coins[i].price_eur %>
+            </td>
+            <td>
+              <%= coins[i]['24h_volume_eur'] %>
+            </td>
+            <td>
+              <%= coins[i].market_cap_eur %>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+  <!-- S footer -->
+  <footer class="xm-footer J_lazyLoadBox" id="J_footer">
+  </footer>
+</body>
+
+</html>
